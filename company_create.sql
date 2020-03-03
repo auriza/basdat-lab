@@ -58,9 +58,7 @@ CREATE TABLE Dependent(
 
 -- INSERTION -------------------------------------------------------------------
 
-DESCRIBE Employee;
 ALTER TABLE Employee DROP CONSTRAINT Employee_DNum_FKey;
-
 INSERT INTO Employee VALUES('E001','Hakim',null,'Arifin','12-Jan-1987','BATENG','M',4000000,null,1);
 INSERT INTO Employee VALUES('E002','Yuni',null,'Arti','15-Feb-1987', 'BARA','F',4000000,null,2);
 INSERT INTO Employee VALUES('E003','Mutia',null,'Aziza','23-Mar-1987','BATENG','F',4000000,null,3);
@@ -81,7 +79,6 @@ INSERT INTO Department VALUES(1,'HRD','E001','09-Jan-2002');
 INSERT INTO Department VALUES(2,'FINANCE','E002','27-Feb-2003');
 INSERT INTO Department VALUES(3,'HUMAS','E003','30-May-2006');
 INSERT INTO Department VALUES(4,'PRODUKSI','E004','08-Mar-2005');
-
 ALTER TABLE Employee ADD FOREIGN KEY (DNum) REFERENCES Department(DNumber);
 
 INSERT INTO Dept_Locations VALUES(1,'Darmaga');
